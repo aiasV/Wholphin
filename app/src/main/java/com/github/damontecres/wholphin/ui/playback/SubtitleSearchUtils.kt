@@ -35,7 +35,7 @@ sealed interface SubtitleSearch {
     ) : SubtitleSearch
 }
 
-fun PlaybackViewModel.searchForSubtitles(language: String = Locale.current.language) {
+fun PlaybackViewModel.searchForSubtitles(language: String = "el"){
     subtitleSearch.value = SubtitleSearch.Searching
     subtitleSearchLanguage.value = language
     viewModelScope.launchIO {
